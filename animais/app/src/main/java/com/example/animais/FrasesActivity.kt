@@ -1,13 +1,16 @@
 package com.example.animais
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.example.animais.databinding.ActivityFrasesBinding
 
-class FrasesActivity: AppCompatActivity() {
+class FrasesActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityFrasesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_frases)
 
+        binding = ActivityFrasesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
     }
 }

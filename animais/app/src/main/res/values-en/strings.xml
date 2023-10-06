@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Frases_Gato_Cachorro">Cats and Dogs Phrases</string>
+    <string name="Digite_nome">Type your name</string>
+    <string name="Nome_vazio">"You must enter your name"</string>
+    <string name="app_name">Myapp</string>
+</resources>

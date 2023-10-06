@@ -2,6 +2,7 @@ package com.example.animais
 
 import Constantes.Constants
 import MySharedPref
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,21 +20,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        //ouvindo um evento
         binding.ButtonGuardar.setOnClickListener(this)
-
     }
 
-    override fun onClick(view: View, ) {
-
+    override fun onClick(view: View) {
         if(view.id == R.id.Button_guardar){
             val name = binding.EditTextName.text.toString()
 
             if(name.isEmpty()){
-                //mostrar um alerta
-                Toast.makeText(this, "Voce deve digitar o seu nome", Toast.LENGTH_SHORT).show()
+                //mostrar um alerta ///////////// ?????????????????????????????????
+                Toast.makeText(this, "Você deve digitar um nome", Toast.LENGTH_SHORT).show()
             }else{
-                mainsp.setString(Constants.NAME_USER, binding.EditTextName.text.toString())
+                mainsp.setString(Constants.NAME_USER, name)
+                Toast.makeText(this, "Nome salvo com sucesso", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, FrasesActivity::class.java))
+
             }
         }
     }
