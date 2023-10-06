@@ -1,6 +1,17 @@
 <resources>
     <string name="Frases_Gato_Cachorro">Frases de Gatos e Cachorros</string>
+    <string name="Botao_guardar">Guardar</string>
+    <string name="Botao_gerar">Gerar outra frase</string>
+
     <string name="Digite_nome">Digite seu nome</string>
     <string name="Nome_vazio">"Você deve digitar o seu nome"</string>
+    <string name="Nome_salvo">"Nome salvo com sucesso!"</string>
+
+    <string name="Msg_Ola">"Ola,"</string>
+
+
+
+
+
     <string name="app_name">Meuapp</string>
 </resources>

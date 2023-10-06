@@ -1,4 +1,4 @@
-package com.example.animais
+package com.example.animais.view
 
 import Constantes.Constants
 import MySharedPref
@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.animais.R
 import com.example.animais.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -29,12 +30,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             val name = binding.EditTextName.text.toString()
 
             if(name.isEmpty()){
-                //mostrar um alerta ///////////// ?????????????????????????????????
-                Toast.makeText(this, "Você deve digitar um nome", Toast.LENGTH_SHORT).show()
+                //mostrar um alerta
+                Toast.makeText(this, R.string.Nome_vazio, Toast.LENGTH_SHORT).show()
             }else{
                 mainsp.setString(Constants.NAME_USER, name)
-                Toast.makeText(this, "Nome salvo com sucesso", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.Nome_salvo, Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, FrasesActivity::class.java))
+                finish()
 
             }
         }
